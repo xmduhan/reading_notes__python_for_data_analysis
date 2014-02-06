@@ -9,7 +9,7 @@ from string import letters
 d1 = DataFrame({'a':range(1000),'b':range(1000),'c':range(1000)})
 d2 = DataFrame({
     'a':np.random.rand(1000),
-    'b':[np.random.normal(0) * 1000 for i in range(1000)],
+    'b':np.random.normal(size=(1000)),
     'c':range(1000)
 })
 
