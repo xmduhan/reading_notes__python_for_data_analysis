@@ -38,6 +38,9 @@ d1.sort_index(by=['b','c'],ascending=[0,1])
 
 #%% 对列名排序
 d1.sort_index(axis=1,ascending=False)
+#%% 对列指定出现的顺序
+d1['c','b','a']
+
 #%% 如果想根据某一行数据对列进行排序 
 d1.reindex(columns=d1.ix['j'].order().index)
 
