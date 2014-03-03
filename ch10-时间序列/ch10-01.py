@@ -1,21 +1,46 @@
 # -*- coding: utf-8 -*-
+"""
+Created on Sun Mar 02 18:31:32 2014
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-                       1   
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+@author: 14F
+"""
 #%%
-import pandas as pd
+from datetime import datetime
 
+#%% 获取当前系统时间
+now = datetime.now()
+
+
+#%% # 时间的拆解
+#获取年份
+now.year
+#%% 获取年的月序
+now.month
+#%% 获取月的天序
+now.day
+#%% 获取周的天序
+now.weekday()
+#%% 获取日期部分
+now.date()
+
+
+#%% 时间的构造和间隔计算
+d1 = datetime(2003,1,1)
+d1
 #%%
-p = pd.Period('2007',freq='A-DEC')
+d2 = datetime(2014,1,1,11,0)
+d2
+#%% 注意1为8万秒
+delta1 = d2-d1
+delta1
 #%%
-p.asfreq(freq='M',how='start')
+delta1.days
 #%%
-p.asfreq(freq='M',how='end')
+delta1.seconds
 #%%
-p = pd.Period('2007',freq='A-JUN')
+delta2 = d1-d2
+delta2
 #%%
-p.asfreq(freq='M',how='start')
+delta2.days
 #%%
-p.asfreq(freq='M',how='end')
-#%%
+delta2.seconds
